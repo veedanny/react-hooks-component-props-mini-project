@@ -1,7 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
-// Functional component for the Header
 const Header = ({ name }) => {
   return (
     <header>
@@ -10,9 +8,9 @@ const Header = ({ name }) => {
   );
 };
 
-// Define prop types for the Header component
 Header.propTypes = {
-  name: PropTypes.string.isRequired, // name is a required string prop
+  name: PropTypes.string.isRequired,
 };
 
 export default Header;
+

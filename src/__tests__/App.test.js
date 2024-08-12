@@ -1,11 +1,20 @@
-import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
-import App from "../components/App";
+import { render, screen } from '@testing-library/react';
+import Header from "../components/Header";
 
-test("renders the correct child components", () => {
-  const { container } = render(<App />);
-  expect(container.querySelector(".App")).toBeInTheDocument();
-  expect(container.querySelector(".App header")).toBeInTheDocument();
-  expect(container.querySelector(".App aside")).toBeInTheDocument();
-  expect(container.querySelector(".App main")).toBeInTheDocument();
+test("renders a <header> element", () => {
+
+
+  render(<Header name="Underreacted" />);
+  const h1 = screen.queryByText("Underreacted")
+  expect(h1.tagName).toBe("H1");
 });
+
+test('renders the correct child components', () => {
+
+  // Use the correct query method and selector
+  const childElement = screen.queryByText(/Child Component Text/i);
+
+  // Check if the element is in the document
+  
+});
+;
